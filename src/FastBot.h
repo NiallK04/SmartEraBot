@@ -1,4 +1,3 @@
-#include <TinyGsmClient.h>
 /*
     Очень простая и быстрая библиотека для телеграм бота на esp8266/esp32
     Документация: 
@@ -119,6 +118,10 @@
 
 #define FB_BLOCK_SIZE 1024
 
+// DEFINING GSM MODEL
+#define TINY_GSM_MODEM_SIM800
+//
+
 // ============================================
 #define FB_TEXT 0
 #define FB_MARKDOWN 1
@@ -134,24 +137,25 @@
 #include <StreamString.h>
 #include "utils.h"
 #include "datatypes.h"
-
-#ifdef ESP8266
-#include <ESP8266WiFi.h>
-#include <ESP8266HTTPClient.h>
-#ifndef FB_NO_OTA
-#include <ESP8266httpUpdate.h>
-#endif
-#include <WiFiClientSecure.h>
-#include <WiFiClientSecureBearSSL.h>
-#else   // ESP32
-#include <WiFi.h>
-#include <HTTPClient.h>
-#ifndef FB_NO_OTA
-#include <HTTPUpdate.h>
-#endif
-#include <WiFiClientSecure.h>
-#endif
-
+#include <TinyGsmClient.h>
+#include 
+//#ifdef ESP8266
+//#include <ESP8266WiFi.h>
+//#include <ESP8266HTTPClient.h>
+//#ifndef FB_NO_OTA
+//#include <ESP8266httpUpdate.h>
+//#endif
+//#include <WiFiClientSecure.h>
+//#include <WiFiClientSecureBearSSL.h>
+//#else   // ESP32
+//#include <WiFi.h>
+//#include <HTTPClient.h>
+//#ifndef FB_NO_OTA
+//#include <HTTPUpdate.h>
+//#endif
+//#include <WiFiClientSecure.h>
+//#endif
+//THESE LINES ARE COMMENTED DUE TO MOVING FROM WIFI TO GSM
 // ================================
 class FastBot {
 public:
