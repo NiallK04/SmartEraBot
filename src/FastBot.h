@@ -122,6 +122,7 @@
 #define TINY_GSM_MODEM_SIM800
 //
 
+// NO NEED TO DEFINE MODEM VERSION
 // ============================================
 #define FB_TEXT 0
 #define FB_MARKDOWN 1
